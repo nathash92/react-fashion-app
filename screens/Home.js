@@ -1,12 +1,13 @@
 import { Switch, Text } from "@rneui/themed";
 import { memo } from "react";
 import { Dimensions, ScrollView, StyleSheet, View } from "react-native";
+
 import BannerSlide from "../components/banner/BannerSlide";
 import CategorySlide from "../components/category/CategorySlide";
 import BestSellers from "../components/products/BestSellers";
 import NewArrivals from "../components/products/NewArrivals";
 import { GAP, PAGE_PAD } from "../constants";
-import appStyles from "../styles";
+import appStyles from "../styles/styles";
 
 const dimensions = Dimensions.get("window");
 
@@ -15,7 +16,7 @@ const Home = () => {
     <>
       <ScrollView style={[styles.page]}>
         <View style={styles.outlet}>
-          <Text style={styles.outletLbl}>Outlet</Text>
+          <Text style={styles.outletLbl}>Outlet View</Text>
           <Switch style={{ height: 20 }} />
         </View>
 
@@ -65,7 +66,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: PAGE_PAD,
   },
   outletLbl: {
-    fontSize: 16,
+    fontSize: 12,
     fontWeight: "500",
     paddingHorizontal: 10,
   },
